@@ -3,42 +3,31 @@
 	font-size: 13px
 }
 
-.xBtn{
-	padding: 4px; 
-	padding-bottom: 2px; 
-	padding-top:0px
+.lead {
+	font-size: 1.5rem;
+	font-family: var(--righteous-font);
 }
-html {
-  font-family: "Avenir Next", Helevetica, sans-serif;
-  text-align: center;
-}
-
-body {
-  max-width: 500px;
-  margin: 0 auto;
+ul {
+	/*border-top: 2px solid white;*/
+	margin-top: 2rem;
+	list-style: none;
+	/*display: none;*/
 }
 
-input {
-  padding-top: 30px;
-  width: 500px;
-  height: 60px;
-  font-size: 40px;
-  border: 0;
+.topList {
+	/*border-top: 2px solid white;*/
+	margin-top: 0;
+	list-style: none;
 }
 
-input:focus {
-  outline: none;
-}
-
-list {
-  text-align: left;
-  font-size: 40px;
-  list-style: none;
-  margin: 0;
-}
-
-list:hover {
-  text-decoration: line-through;
+.checkboxes {
+	float: right;
+	line-height: 15px;
+	width: 17px;
+	height: 17px;
+	background-color: #e9ecef;
+	border: 1px solid #e9ecef;
+	border-radius: 3px;
 }
 
 //! Breakpoints 
