@@ -89,4 +89,7 @@ window.onload = function() {
 		btnClr.style.display = "none";
 		list.style.borderTop = "";
 	}
+	
+$("[data-toggle=popover]")
+	.popover({html:true})
 }
