@@ -30,6 +30,23 @@ ul {
 	border-radius: 3px;
 }
 
+.waveSec{
+	position: relative;
+	margin: 0;
+	padding: 0;
+	height: 80vh;
+}
+.wave{
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	margin: 0px;
+}
+.waveSec2{
+	height: 15vh;
+	background: #78CFFF;
+}
+
 //! Breakpoints 
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) { ... }
