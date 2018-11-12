@@ -62,16 +62,6 @@ window.onload = function() {
 		}
 	}
 
-	//adding data to local storage
-	function addToLocalStorage() {
-		if(typeof(Storage) !== "undefined") {
-			localStorage.setItem("todoList", JSON.stringify(todoList));
-		}
-		else {
-			alert("browser doesn't support local storage!");
-		}
-	}
-
 	//display all todo list
 	function displayList() {
 		list.style.borderTop = "2px solid white";
