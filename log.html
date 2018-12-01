@@ -3,20 +3,21 @@
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="style.css">
 	<script src="motion.js"></script>
 
 	<!-- Icons -->
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
 	  
-    <title>Reef Pi</title>
+    <title id="title">Reef Pi</title>
   </head>
-  <body>
+  <body id="body">
 	  <nav class="navbar navbar-expand-lg navbar-light bg-light">
 	  <a class="navbar-brand" href="#">Your Tank</a>
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,13 +25,13 @@
 	  </button>
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 		<ul class="navbar-nav mr-auto topList">
-		  <li class="nav-item active">
+		  <li class="nav-item">
 			<a class="nav-link" href="index.html"><i class="material-icons"> refresh</i> Status <span class="sr-only">(current)</span></a>
 		  </li>
 		  <li class="nav-item">
 			<a class="nav-link" href="alert.html"><i class="material-icons">warning</i> Alerts</a>
 		  </li>
-		  <li class ="nav-item">
+		  <li class ="nav-item active">
 			<a class="nav-link" href="log.html"><i class="material-icons">insert_chart</i> Log</a>
 		  </li>
 		  <li class ="nav-item">
@@ -40,7 +41,7 @@
 	  </div>
 	</nav>
 	<section class="waveSec">
-	<img src="Images/wave.png" class="wave">
+	<img src="Images/wave.png" class="wave" id="wave"> 	
 	<div class="row" style="margin: 5px;">
 		<div class="col">
 		    <h1>November</h1>
@@ -73,35 +74,19 @@
 		</div>
 	</div>
 	<div class="row text-center" style="margin-left: 5px; font-size: 20px;">
-		<div class="col-2">
-			<p>25<sup>th</sup></p>
-		</div>
+		<div class="col-2"><p>25<sup>th</sup></p></div>
 		|
-		<div class="col-2">
-			<p>26<sup>th</sup></p>
-		</div>
+		<div class="col-2"><p>26<sup>th</sup></p></div>
 		|
-		<div class="col-2">
-			<p>27<sup>th</sup></p>
-		</div>
+		<div class="col-2"><p>27<sup>th</sup></p></div>
 		|
-		<div class="col-2">
-			<p>28<sup>th</sup></p>
-		</div>
+		<div class="col-2"><p>28<sup>th</sup></p></div>
 	</div>
 	<div class="row text-center" style="margin-left: 5px; font-size: 20px; line-height: 0px;">
-		<div class="col-2">
-			<p>78<sup><span>&#9900;</span></sup></p>
-		</div>
-		<div class="col-2">
-			<p>75<sup><span>&#9900;</span></sup></p>
-		</div>
-		<div class="col-2">
-			<p>79<sup><span>&#9900;</span></sup></p>
-		</div>
-		<div class="col-2">
-			<p>77<sup><span>&#9900;</span></sup></p>
-		</div>
+		<div class="col-2"><p>78<sup><span>&#9900;</span></sup></p></div>
+		<div class="col-2"><p>75<sup><span>&#9900;</span></sup></p></div>
+		<div class="col-2"><p>79<sup><span>&#9900;</span></sup></p></div>
+		<div class="col-2"><p>77<sup><span>&#9900;</span></sup></p></div>
 	</div>
 	</section>
     <!-- Optional JavaScript -->
@@ -110,4 +95,22 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </body>
+	
+	<!-- Script to Change the Waves -->
+	<script>  
+			var x = window.matchMedia("(max-width: 800px)")
+			WaveSize(x) // Call listener function at run time
+			x.addListener(WaveSize) // Attach listener function on state changes
+			
+			// Check Function
+			function WaveSize(x) {
+				if (x.matches) { // If media query matches
+					var w = document.getElementById('wave');
+					w.src='Images/wave.png';
+				} else {
+					var w = document.getElementById('wave');
+						w.src='Images/waveReduced-1500.png';
+				}
+			}
+	</script>
 </html>

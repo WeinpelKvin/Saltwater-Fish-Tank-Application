@@ -14,7 +14,7 @@
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
 	  
-    <title>Reef Pi</title>
+    <title id="title">Reef Pi</title>
   </head>
   <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -25,7 +25,7 @@
 	  
 	<div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto topList">
-      <li class="nav-item">
+      <li class="nav-item active">
         <a class="nav-link" href="index.html"><i class="material-icons"> refresh</i> Status <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
@@ -57,7 +57,7 @@
 				<hr>
 				<h6 class="sideStatus">Humidity:</h6><h1 style="font-size: 50px; line-height: 30px; text-align: center;">20<span style="font-size:40px">%</span></h1>
 				<hr>
-				<h6 class="sideStatus">Last Fed:</h6><h1 style="font-size: 50px; line-height: 30px; text-align: center;">5<span style="font-size:20px">hrs</span></h1>
+				<h6 class="sideStatus">Last Fed:</h6><h1 style="font-size: 50px; line-height: 30px; text-align: center;">5<span style="font-size:20px">hrs</span></h1><h6 class="sideStatus" style="line-height: 0">ago</h6>
 			</div>
 		  </div>
 		  <br>
@@ -90,4 +90,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </body>
+	<!-- Script to Change the Waves -->
+		<script>  
+				var x = window.matchMedia("(max-width: 800px)")
+				WaveSize(x) // Call listener function at run time
+				x.addListener(WaveSize) // Attach listener function on state changes
+
+				// Check Function
+				function WaveSize(x) {
+					if (x.matches) { // If media query matches
+						var w = document.getElementById('wave');
+						w.src='Images/wave.png';
+					} else {
+						var w = document.getElementById('wave');
+							w.src='Images/waveReduced-1500.png';
+					}
+				}
+	</script>
 </html>
