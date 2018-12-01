@@ -6,6 +6,7 @@ window.onload = function() {
 	var list = document.getElementById("list");	
 	var btnClr = document.getElementById("btnClr");	
 	var id = 1;
+	
 	// listItem = {item: "todo item", checked: flase}
 	var liItem = "";
 	var todoList = [];
@@ -41,7 +42,7 @@ window.onload = function() {
 				btnClr.style.display = "inline";
 			}
 			var text = input.value;	
-			var item = `<li id="li-${id}">${text}<input id="box-${id}" 			class="checkboxes" type="checkbox"></li>`;				
+			var item = `<li id="li-${id}">${text}<input id="box-${id}" class="checkboxes" type="checkbox"></li>`;				
 			list.insertAdjacentHTML('beforeend', item);	
 			liItem = {item: text, checked: false};
 			todoList.push(liItem);		
@@ -89,6 +90,20 @@ window.onload = function() {
 		btnClr.style.display = "none";
 		list.style.borderTop = "";
 	}
+	
+// Function to check the window size for changes
+function WaveSize(x) {
+    if (x.matches) { // If media query matches
+        document.getElementById('wave').src='Images/wave.png';
+    } else {
+        document.getElementById('wave').src='Images/waveReduced-1500.png';
+    }
+}
+
+var x = window.matchMedia("(max-width: 800px)")
+WaveSize(x) // Call listener function at run time
+x.addListener(WaveSize) // Attach listener function on state changes
+
 	
 $("[data-toggle=popover]")
 	.popover({html:true})
