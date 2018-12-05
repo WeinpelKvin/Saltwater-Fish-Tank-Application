@@ -42,7 +42,7 @@ window.onload = function() {
 				btnClr.style.display = "inline";
 			}
 			var text = input.value;	
-			var item = `<li id="li-${id}">${text}<input id="box-${id}" class="checkboxes" type="checkbox"></li>`;				
+			var item = `<li id="li-${id}" class="listBox">${text}<input id="box-${id}" class="checkboxes" type="checkbox"></li><hr stlye="line-height = 0px;">`;				
 			list.insertAdjacentHTML('beforeend', item);	
 			liItem = {item: text, checked: false};
 			todoList.push(liItem);		
@@ -68,7 +68,6 @@ window.onload = function() {
 		list.style.borderTop = "2px solid white";
 		todoList = JSON.parse(localStorage.getItem("todoList"));
 		todoList.forEach(function(element) {
-			console.log(element.item)
 			var text = element.item;
 			var item = `<li id="li-${id}">${text}<input id="box-${id}" class="checkboxes" type="checkbox"></li>`;
 			list.insertAdjacentHTML("beforeend", item);
