@@ -93,3 +93,25 @@ window.onload = function() {
 $("[data-toggle=popover]")
 	.popover({html:true})
 }
+
+// Log Tables
+function tempTable(){
+	$('#logNumbers').empty();
+	document.getElementById('tableTitle').innerHTML = "Temperature";
+	var appendEl = $('<div class="row text-center" style="margin-left: 5px; font-size: 20px; line-height: 0px;"></div>').appendTo('#logNumbers');
+	$('<div class="col-2"><p>78<sup><span>&#9900;</span></sup></p></div><div class="col-2"><p>75<sup><span>&#9900;</span></sup></p></div><div class="col-2"><p>79<sup><span>&#9900;</span></sup></p></div><div class="col-2"><p>77<sup><span>&#9900;</span></sup></p></div>').appendTo(appendEl);
+}
+
+function pHTable(){
+	$('#logNumbers').empty();
+	document.getElementById('tableTitle').innerHTML = "pH";
+	var appendEl = $('<div class="row text-center" style="margin-left: 5px; font-size: 20px; line-height: 0px;"></div>').appendTo('#logNumbers');
+	$('<div class="col-2"><p>7</p></div><div class="col-2"><p>7</p></div><div class="col-2"><p>7</p></div><div class="col-2"><p>7</p></div>').appendTo(appendEl);
+}
+
+function humidTable(){
+	$('#logNumbers').empty();
+	document.getElementById('tableTitle').innerHTML = "Humidity";
+	var appendEl = $('<div class="row text-center" style="margin-left: 5px; font-size: 20px; line-height: 0px;"></div>').appendTo('#logNumbers');
+	$('<div class="col-2"><p>45<span style="font-size:20px">%</span></p></div><div class="col-2"><p>49<span style="font-size:20px">%</span></p></div><div class="col-2"><p>47<span style="font-size:20px">%</span></p></div><div class="col-2"><p>45<span style="font-size:20px">%</span></p></div>').appendTo(appendEl);
+}

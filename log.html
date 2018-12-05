@@ -57,33 +57,36 @@
 		<div class=" col dropdown show" style="margin-right: 5px;">
 		  <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Status Logs</a>
 		  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-			<a class="dropdown-item" href="#">Temperature</a>
-			<a class="dropdown-item" href="#">pH</a>
-			<a class="dropdown-item" href="#">Last Fed</a>
-			<a class="dropdown-item" href="#">Humidity</a>
+			<a class="dropdown-item" href="#" onclick="tempTable()">Temperature</a>
+			<a class="dropdown-item" onclick="pHTable()" href="#">pH</a>
+			<a class="dropdown-item" href="#" onclick="humidTable()">Humidity</a>
 		  </div>
 		</div>
 	</div>
 	<br>
 	<div class="row">
 		<div class="col" style="margin-left: 15px;">
-			<h3>Temperature</h3>
+			<h3 id="tableTitle">Temperature</h3>
 		</div>
 	</div>
-	<div class="row text-center" style="margin-left: 5px; font-size: 20px;">
-		<div class="col-2"><p>25<sup>th</sup></p></div>
-		|
-		<div class="col-2"><p>26<sup>th</sup></p></div>
-		|
-		<div class="col-2"><p>27<sup>th</sup></p></div>
-		|
-		<div class="col-2"><p>28<sup>th</sup></p></div>
-	</div>
-	<div class="row text-center" style="margin-left: 5px; font-size: 20px; line-height: 0px;">
-		<div class="col-2"><p>78<sup><span>&#9900;</span></sup></p></div>
-		<div class="col-2"><p>75<sup><span>&#9900;</span></sup></p></div>
-		<div class="col-2"><p>79<sup><span>&#9900;</span></sup></p></div>
-		<div class="col-2"><p>77<sup><span>&#9900;</span></sup></p></div>
+	<div id="table" class="container" style="padding: 0px">
+		<div class="row text-center" style="margin-left: 5px; font-size: 20px;">
+			<div class="col-2"><p>25<sup>th</sup></p></div>
+			|
+			<div class="col-2"><p>26<sup>th</sup></p></div>
+			|
+			<div class="col-2"><p>27<sup>th</sup></p></div>
+			|
+			<div class="col-2"><p>28<sup>th</sup></p></div>
+		</div>
+		<div id="logNumbers" class="container" style="padding: 0px">
+			<div class="row text-center" style="margin-left: 5px; font-size: 20px; line-height: 0px;">
+				<div class="col-2"><p>78<sup><span>&#9900;</span></sup></p></div>
+				<div class="col-2"><p>75<sup><span>&#9900;</span></sup></p></div>
+				<div class="col-2"><p>79<sup><span>&#9900;</span></sup></p></div>
+				<div class="col-2"><p>77<sup><span>&#9900;</span></sup></p></div>
+			</div>
+		</div>
 	</div>
 	</section>
     <!-- Optional JavaScript -->
