@@ -21,7 +21,6 @@ window.onload = function() {
 	btnClr.addEventListener("click", clearList);
 
 	if(localStorage.length <= 0) {
-		btnClr.style.display = "none"; //hide clear btn	
 		console.log("button");
 	}
 
