@@ -36,8 +36,9 @@ ul {
 
 .listBox{
 	padding: 10px;
-	color: white;
-	background-color: #007AFF;
+	color: #007AFF;
+	background-color: white;
+	border-color: #007AFF;
 }
 
 .waveSec{

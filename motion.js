@@ -42,7 +42,7 @@ window.onload = function() {
 				btnClr.style.display = "inline";
 			}
 			var text = input.value;	
-			var item = `<li id="li-${id}" class="listBox">${text}<input id="box-${id}" class="checkboxes" type="checkbox"></li><hr stlye="line-height = 0px;">`;				
+			var item = `<li id="li-${id}" class="listBox">${text}<input id="box-${id}" class="checkboxes" type="checkbox"></li>`;				
 			list.insertAdjacentHTML('beforeend', item);	
 			liItem = {item: text, checked: false};
 			todoList.push(liItem);		
@@ -106,7 +106,7 @@ function pHTable(){
 	$('#logNumbers').empty();
 	document.getElementById('tableTitle').innerHTML = "pH";
 	var appendEl = $('<div class="row text-center" style="margin-left: 5px; font-size: 20px; line-height: 0px;"></div>').appendTo('#logNumbers');
-	$('<div class="col-2"><p>7</p></div><div class="col-2"><p>7</p></div><div class="col-2"><p>7</p></div><div class="col-2"><p>7</p></div>').appendTo(appendEl);
+	$('<div class="col-2"><p>8.1</p></div><div class="col-2"><p>8.2</p></div><div class="col-2"><p>8.4</p></div><div class="col-2"><p>8.2</p></div>').appendTo(appendEl);
 }
 
 function humidTable(){
