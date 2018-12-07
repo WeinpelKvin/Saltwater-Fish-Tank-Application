@@ -54,6 +54,10 @@ ul {
 	
 }
 
+.toolIcon{
+	color: #007AFF;
+}
+
 /* The switch - the box around the slider */
 .switch {
   position: relative;
