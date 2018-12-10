@@ -79,7 +79,6 @@ window.onload = function() {
 			id++;
 		});
 	}
-
 	//clear list event listener
 	function clearList() {
 		todoList = [];
